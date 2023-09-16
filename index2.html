@@ -14,13 +14,18 @@
     <script type="module">
       import * as THREE from 'three';
       import { MindARThree } from 'mindar-image-three';
-      const mindarThree = new MindARThree({
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // const start = async() => {
+
+      // initialize MindAR
+      const mindarThree = new window.MINDAR.IMAGE.MindARThree({
     	container: document.body,
     	imageTargetSrc: "./assets/textures/unfoldingQR.mind"
       });
       const {renderer, scene, camera} = mindarThree;
 
-       // preload images
+      // preload images
     const imagesTotal = 16;
     const imageNum = Array.from({length: imagesTotal}, (value, index) => index.toString());
     
@@ -73,9 +78,9 @@
     
       renderer.render(scene, camera);
     });
-    };
-
+    }
     start();
+  });
   </script>
   <style>
     html, body {position: relative; margin: 0; width: 100%; height: 100%; overflow: hidden}
