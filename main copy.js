@@ -1,11 +1,9 @@
-// const THREE = window.MINDAR.IMAGE.THREE;
-import * as THREE from 'three';
-import { MindARThree } from 'mindar-image-three';
+const THREE = window.MINDAR.IMAGE.THREE;
 
 document.addEventListener('DOMContentLoaded', () => {
   const start = async() => {
     // initialize MindAR 
-    const mindarThree = new MindARThree({
+    const mindarThree = new window.MINDAR.IMAGE.MindARThree({
       container: document.body,
       imageTargetSrc: './assets/textures/unfoldingQR.mind',
     });
