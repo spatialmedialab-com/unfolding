@@ -36,7 +36,7 @@ const matCircle = new THREE.MeshBasicMaterial({
   side: THREE.BackSide
 });
 const circle = new THREE.Mesh(geoCircle, matCircle);
-circle.rotation.y -= THREE.Math.degToRad(270);
+circle.rotation.y -= THREE.MathUtils.degToRad(270);
 // circle.position.y += .5;
 
 
